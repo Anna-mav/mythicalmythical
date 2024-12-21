@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mythical Creatures Poster</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #f4f0e6;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .frame {
+            width: 300px;
+            height: 600px;
+            background: #eae6d8;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frame img {
+            width: 100%;
+            height: auto;
+            transform: scale(0.9);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .frame:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .animated-text {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.5rem;
+            color: #333;
+            animation: fadeInOut 4s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="frame">
+            <img src="images/phoenix.png" alt="Phoenix">
+            <div class="animated-text">The Phoenix Rises</div>
+        </div>
+        <div class="frame">
+            <img src="images/dragon.png" alt="Dragon">
+            <div class="animated-text">Dragon's Fire</div>
+        </div>
+        <div class="frame">
+            <img src="images/mermaid.png" alt="Mermaid">
+            <div class="animated-text">Song of the Siren</div>
+        </div>
+    </div>
+</body>
+</html>
